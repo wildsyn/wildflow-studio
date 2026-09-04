@@ -3,11 +3,20 @@
 wildflow-studio 是独立的内容生产开箱包，以知识库驱动的人机协作、修改、审核和交付为主要使用方式。
 覆盖图文、音频、视频及其组合，不按媒体类型限制产品范围。
 
-产品方向已经确认：先建设工作台，以 Mac 客户端为主要入口，以
-[dsh-oil-creator](https://github.com/oil-oil/dsh-oil-creator) 为内容工作台功能基础，
-在本地文件与 Obsidian 知识库之上连接内容项目、AI 对话和可选 Skills。
-Electron 是优先技术路线，DSH Desktop 是首选桌面复用候选；具体组合版本须先验证。
-详见[产品方案](docs/product-plan.md)与[集成验收清单](docs/integration-checklist.md)。
+2026-09-05 决策明确：当前优先持续打磨 [wildflow-factory](https://github.com/wildsyn/wildflow-factory)
+内容工厂，为内部 AI 图书带货完善由 Skills 和自动驱动流程组成的自动化视频生产。
+工厂一直在推进，与既有“视频自动化”线并行，业务和产品边界不合并。
+
+先通过具体业务内容工作台交付积累经验，再归纳自有内容工作台产品；后置的是本仓产品化，
+不影响业务工作台交付。自有工作台具体体系尚未开始搭建；
+[dsh-oil-creator](https://github.com/oil-oil/dsh-oil-creator) 是形态参照，不能替代业务交付经验。
+此前的 Mac、Electron 和 DSH Desktop 方案保留为候选，尚未确定采用或启动实施。
+
+Harness 是基于 DeepSeek Harness 搭建的插件系统基础；工厂与后续工作台主要使用自有模型服务。
+模型服务当前先供内部使用、内部充值，不先对外商业化；待内部使用稳定，且有自持固定卡或可长期
+租用的固定卡保障稳定供给后，再考虑对外，不承诺日期。公开 MIT 仓库不代表模型服务已经对外商业化。
+本页提供当前方向摘要，内部跨仓记录见 [内部 ADR-0015（需主仓权限）](https://github.com/wildsyn/wildflow/blob/main/docs/adr/0015-internal-factory-first.md)，
+本仓边界与后续候选见[产品方案](docs/product-plan.md)及[集成验收清单](docs/integration-checklist.md)。
 
 当前仅建立公开 MIT 仓库与治理骨架。没有可启动客户端、安装器、后台服务或已验证业务链路；
 不要把建仓理解为开箱即用能力已经交付。本次公开范围仅为原创仓库骨架，产品安装包与发行方式尚未完成。

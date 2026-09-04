@@ -1,9 +1,13 @@
 # 上游与来源
 
+2026-09-05 更新：内容工厂持续打磨；先通过具体业务内容工作台交付积累经验，再归纳自有工作台产品。
+本仓具体体系尚未开始搭建。以下来源及旧源码快照作为后续参照，不替代业务交付经验；
+具体决策见[产品方案](docs/product-plan.md)。
+
 | 对象 | 来源 | 当前处理 |
 |---|---|---|
-| dsh-oil-creator | https://github.com/oil-oil/dsh-oil-creator | 已选定为内容工作台功能基础；优先插件集成与扩展，尚未安装或复制源码 |
-| DSH Desktop | https://github.com/anywhere-labs/dsh-desktop | Electron 桌面能力首选复用候选；不是 DeepSeek 官方项目，尚未冻结采用版本 |
+| dsh-oil-creator | https://github.com/oil-oil/dsh-oil-creator | 后续内容工作台的形态参考；具体复用范围未定，尚未安装或复制源码 |
+| DSH Desktop | https://github.com/anywhere-labs/dsh-desktop | 此前 Electron 桌面方案的复用候选；不是 DeepSeek 官方项目，是否采用及版本均未冻结 |
 | DeepSeek Harness | https://github.com/deepseek-ai/deepseek-harness | 执行底座方向已选定；尚未选择或安装运行版本，未复制源码 |
 | Obsidian | https://obsidian.md/ | 外部应用依赖；不随本仓再分发应用本体 |
 | 通用 Skills、DSH/OB 插件 | 各自的权威仓库或作者发行渠道 | 按需选取；尚未冻结清单，不复制整套用户配置 |
@@ -29,7 +33,7 @@ Git 仓库、npm 包、DSH Bundle、Skill 和 OB 插件是不同单位。目录�
 - oil creator：[包声明](https://github.com/oil-oil/dsh-oil-creator/blob/03f8d09ce9a298578ba850c0fc5dc3ff44b568ec/package.json)、[许可](https://github.com/oil-oil/dsh-oil-creator/blob/03f8d09ce9a298578ba850c0fc5dc3ff44b568ec/LICENSE)、[文件约定](https://github.com/oil-oil/dsh-oil-creator/blob/03f8d09ce9a298578ba850c0fc5dc3ff44b568ec/docs/files.md)、[实现与限制](https://github.com/oil-oil/dsh-oil-creator/blob/03f8d09ce9a298578ba850c0fc5dc3ff44b568ec/docs/implementation.md)、[侧栏 patch](https://github.com/oil-oil/dsh-oil-creator/blob/03f8d09ce9a298578ba850c0fc5dc3ff44b568ec/cordis.patch.yml)。
 - Desktop：[包声明](https://github.com/anywhere-labs/dsh-desktop/blob/b9758b4346f6a806e4407873c5269b9989a39fbe/dsh-plugin-desktop/package.json)、[架构](https://github.com/anywhere-labs/dsh-desktop/blob/b9758b4346f6a806e4407873c5269b9989a39fbe/docs/architecture.md)、[端口与更新行为](https://github.com/anywhere-labs/dsh-desktop/blob/b9758b4346f6a806e4407873c5269b9989a39fbe/docs/user-guide.md)。
 
-### 集成前必须解决
+### 后续采用该组合时必须解决
 
 1. 为 Desktop、DSH 与 oil creator 选择一组通过测试的版本，或完成最小兼容适配；不能忽略 peer 冲突直接强制安装。
 2. oil creator 会替换 `ui-sidebar`，Desktop 的部分模式也接管布局；必须验证共存、切换和卸载还原，不能只以页面打开作为通过。
